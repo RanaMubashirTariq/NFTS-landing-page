@@ -133,14 +133,12 @@ export default function TopHeaderSubsection() {
           </div>
 
           <div className="absolute w-[364px] top-[323px] left-0 flex gap-4">
-            <Button className="w-[172px] h-[52px] transform transition-transform duration-300 hover:scale-90 cursor-pointer bg-[#d3f85a] hover:bg-[#d3f85a]/90 rounded-[58.5px]">
-              <span className="[font-family:'Exo2'] font-medium text-black text-[15px]">
+            <Button className="font-['Exo2'] font-normal text-black text-[15px] leading-[100%] w-[172px] h-[52px] transform transition-transform duration-300 hover:scale-90 cursor-pointer bg-[#d3f85a] hover:bg-[#d3f85a]/90 rounded-[58.5px]">
                 Start Collecting
-              </span>
             </Button>
             <Button
               variant="outline"
-              className="w-[172px] h-[52px] transform transition-transform duration-300 hover:scale-90 cursor-pointer rounded-[58.5px] border border-[#d3f85a] text-white hover:bg-[#d3f85a]/10"
+              className="w-[172px] h-[52px] transform transition-transform duration-300 hover:scale-90 cursor-pointer rounded-[58.5px] border border-[#d3f85a] text-white font-['Exo2'] leading-[100%]  text-[16.5px] font-normal hover:bg-[#d3f85a]/10"
             >
               Create NFTs
             </Button>
