@@ -102,7 +102,7 @@ export default function FooterSubsection  ()  {
 
         {/* Community sections */}
 
-        <div className="absolute w-full max-[530px]:text-center top-[404px] max-[530px]:top-[510px]  left-[279px] [font-family:'Exo2'] font-semibold text-white text-lg tracking-[0] leading-[normal] max-[1300px]:left-[80px] max-[1100px]:left-[50px] max-[1000px]:left-[25px] max-[700px]:left-1/2 max-[700px]:-translate-x-1/2">
+        <div className="absolute w-full max-[767px]:text-center top-[404px] max-[530px]:top-[510px]  left-[279px] [font-family:'Exo2'] font-semibold text-white text-lg tracking-[0] leading-[normal] max-[1300px]:left-[80px] max-[1100px]:left-[50px] max-[1000px]:left-[25px] max-[700px]:left-1/2 max-[700px]:-translate-x-1/2">
           Join NFTs Community
         </div>
 

@@ -9,7 +9,7 @@ const statisticsData = [
 
 export default function TopHeaderSubsection() {
   return (
-    <section className="w-full h-auto relative bg-black-200 pl-[120px] pt-[76.75px] pb-[75px] max-[1370px]:pl-[80px] max-[1000px]:pt-[40px] max-[1000px]:pb-[40px] max-[1100px]:pl-[50px] max-[1000px]:pl-[25px]">
+    <section className="w-full h-auto relative bg-black-200 pl-[120px] pt-[176.75px] pb-[75px] max-[1370px]:pl-[80px] max-[1000px]:pt-[100px] max-[1000px]:pb-[40px] max-[1100px]:pl-[50px] max-[1000px]:pl-[25px]">
       <div className="relative w-full h-auto">
                       <div className="absolute w-[278px] h-[273px] top-[80px] left-[80px] rounded-[139.16px/136.73px] rotate-[177.74deg] blur-[147.75px] bg-[linear-gradient(141deg,rgba(123,164,154,0.5)_0%,rgba(21,151,119,0.5)_100%)]" />
         {/* Desktop Statistics */}

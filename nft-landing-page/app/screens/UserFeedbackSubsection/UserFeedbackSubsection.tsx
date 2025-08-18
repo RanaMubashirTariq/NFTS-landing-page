@@ -59,7 +59,7 @@ export default function UserFeedbackSubsection  () {
                 </div>
               </div>
 
-              <div className="[font-family:'Roboto'] w-full max-w-[275px] font-normal text-white text-lg tracking-[0] leading-[22.5px] mb-4 max-[1000px]:text-[16px] max-[1000px]:leading-[20px]">
+              <div className="[font-family:'Roboto'] w-full max-w-[275px] max-[767px]:max-w-[100%] font-normal text-white text-lg tracking-[0] leading-[22.5px] mb-4 max-[1000px]:text-[16px] max-[1000px]:leading-[20px]">
                 {feedback.quote}
               </div>
 

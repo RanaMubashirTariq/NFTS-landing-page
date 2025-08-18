@@ -11,7 +11,7 @@ import UserFeedbackSubsection from "./screens/UserFeedbackSubsection/UserFeedbac
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden w-full">
                 <NavbarSection/>
                 <TopHeaderSubsection/>
                <FeatureProductSubsection/>

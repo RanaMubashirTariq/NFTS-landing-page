@@ -1,9 +1,10 @@
+"use client";
 import { ChevronLeftIcon, ChevronRightIcon, HeartIcon } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 
-export default function FeatureProductSubsection  ()  {
+export default function FeatureProductSubsection() {
   const countdownData = [
     { value: "02", label: "Days" },
     { value: "09", label: "Hours" },
@@ -11,52 +12,72 @@ export default function FeatureProductSubsection  ()  {
     { value: "44", label: "Seconds" },
   ];
 
+  // Track current center card index
+  const images = [
+    "/cat-1.png",
+    "/cat-2.png",
+    "/cat-center.png",
+    "/cat-3.png",
+    "/cat4.png",
+  ];
+  const [centerIndex, setCenterIndex] = useState(2);
+
+  const handlePrev = () => {
+    setCenterIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleNext = () => {
+    setCenterIndex((prev) => (prev + 1) % images.length);
+  };
+
+  // Get rotation style based on position relative to center
+  const getRotation = (index: number) => {
+    if (index === centerIndex) return "rotate-0";
+    if ((index + 1) % images.length === centerIndex) return "-rotate-0";
+    if ((index - 1 + images.length) % images.length === centerIndex) return "rotate-[0]";
+    return "rotate-0";
+  };
+
   return (
     <section className="relative w-full h-[563px] max-[500px]:h-[500px] mt-[625px] max-[1000px]:mt-[75px] max-[767px]:mt-10">
-      <div className="relative w-full h-[563px] flex  justify-center">
+      <div className="relative w-full h-[563px] flex justify-center">
+        {/* ... background blur stays the same */}
         <div className="absolute w-[220px] h-[216px] top-[343px] right-[200px] rounded-[109.84px/107.93px] rotate-[177.74deg] blur-[147.75px] bg-[linear-gradient(141deg,rgba(123,164,154,0.5)_0%,rgba(21,151,119,0.5)_100%)]" />
 
+        {/* Example: Left-most image */}
         <img
-          className="absolute w-[209px] h-[338px] max-[500px]:h-[300px] top-[50px] left-0 object-cover"
+          className={`absolute w-[209px] h-[338px] max-[500px]:h-[300px] top-[50px] left-0 object-cover transition-transform duration-500 ${getRotation(0)}`}
           alt="Rectangle"
-          src="/rectangle-3836.svg"
-          srcSet="/cat-1.png"
+          src={images[0]}
         />
 
+        {/* Example: Second image */}
         <img
-          className="absolute w-[330px] h-[375px] max-[500px]:h-[350px] rounded-[12px] top-7 left-[100px] object-cover max-[1100px]:left-[60px] max-[560px]:left-[40px] max-[400px]:left-[15px] "
+          className={`absolute w-[330px] h-[375px] max-[500px]:h-[350px] rounded-[12px] top-7 left-[100px] object-cover max-[1100px]:left-[60px] max-[560px]:left-[40px] max-[400px]:left-[15px] transition-transform duration-500 ${getRotation(1)}`}
           alt="Rectangle"
-          src="/cat-2.png"
-          
+          src={images[1]}
         />
 
+        {/* Arrows */}
         <div className="absolute top-[473px] right-1/2 translate-x-1/2 flex gap-[34px] max-[500px]:top-[410px]">
-          <Button
-            variant="outline"
-            size="icon"
-            className="w-[60px] cursor-pointer  h-[60px] max-[500px]:w-[40px] max-[500px]:h-[40px] rounded-[30px] border-[0.75px] border-white bg-transparent hover:bg-white/10"
-          >
+          <Button onClick={handlePrev} variant="outline" size="icon" className="w-[60px] cursor-pointer h-[60px] max-[500px]:w-[40px] max-[500px]:h-[40px] rounded-[30px] border-[0.75px] border-white bg-transparent hover:bg-white/10">
             <ChevronLeftIcon className="w-[18px] h-[18px] text-[#d3f85a]" />
           </Button>
-
-          <Button
-            variant="outline"
-            size="icon"
-            className="w-[60px] cursor-pointer h-[60px] max-[500px]:w-[40px] max-[500px]:h-[40px] rounded-[30px] border-[0.75px] border-white bg-transparent hover:bg-white/10"
-          >
+          <Button onClick={handleNext} variant="outline" size="icon" className="w-[60px] cursor-pointer h-[60px] max-[500px]:w-[40px] max-[500px]:h-[40px] rounded-[30px] border-[0.75px] border-white bg-transparent hover:bg-white/10">
             <ChevronRightIcon className="w-[18px] h-[18px] text-[#d3f85a]" />
           </Button>
         </div>
 
-        <Card className="relative w-[765px] max-[1100px]:w-[730px] max-[1000px]:w-[400px] max-[550px]:h-[280px] max-[550px]:w-[320px] max-[400px]:w-[300px] max-[350px]:w-[260px]  h-[428px] bg-black rounded-xl border-0 mb-[107px] z-10">
+        {/* Your center Card */}
+        <Card className={`relative w-[765px] max-[1100px]:w-[730px] max-[1000px]:w-[400px] max-[550px]:h-[280px] max-[550px]:w-[320px] max-[400px]:w-[300px] max-[350px]:w-[260px]  h-[428px] bg-black rounded-xl border-0 mb-[107px] z-10 transition-transform duration-500 ${getRotation(2)}`}>
           <CardContent className="p-0 h-full">
             <img
               className="absolute w-[330px] h-[428px] max-[500px]:h-[390px] top-0 left-px rounded-[12px] object-cover max-[1100px]:w-[300px] max-[1000px]:w-[100%]"
               alt="Rectangle"
-              src='/cat-center.png'
+              src={images[centerIndex]}
             />
-
-            <div className="absolute w-[363px] h-16 top-[90px] left-[353px]  max-[1100px]:left-[323px] max-[1000px]:left-[10px] max-[550px]:top-[110px]">
+            {/* Rest of your original content untouched */}
+                        <div className="absolute w-[363px] h-16 top-[90px] left-[353px]  max-[1100px]:left-[323px] max-[1000px]:left-[10px] max-[550px]:top-[110px]">
               <h2 className="absolute w-[360px] top-0 left-px [font-family:'Exo2'] font-semibold text-white text-[26.2px] max-[767px]:text-[20px] tracking-[0] leading-[37.5px] whitespace-nowrap">
                 Irradiation of Fake Yellow
               </h2>
@@ -154,22 +175,22 @@ export default function FeatureProductSubsection  ()  {
             </div>
           </CardContent>
         </Card>
+
       </div>
 
+      {/* Right-most container unchanged */}
       <div className="absolute w-[340px] h-[375px] top-7 right-0 z-0">
         <img
-          className="absolute w-[209px] h-[338px] max-[500px]:h-[300px] max-[400px]:top-[30px] top-[22px] left-[131px] object-cover rounded-[12px] "
+          className={`absolute w-[209px] h-[338px] max-[500px]:h-[300px] max-[400px]:top-[30px] top-[22px] left-[131px] object-cover rounded-[12px] transition-transform duration-500 ${getRotation(4)}`}
           alt="Rectangle"
-          src='/cat4.png'
-          
+          src={images[4]}
         />
-
         <img
-          className="absolute w-[244px] h-[375px] max-[500px]:h-[350px] top-0 left-0 object-cover  rounded-[12px] max-[1100px]:left-[30px] max-[560px]:left-[60px] max-[400px]:left-[80px]   z-10"
+          className={`absolute w-[244px] h-[375px] max-[500px]:h-[350px] top-0 left-0 object-cover rounded-[12px] max-[1100px]:left-[30px] max-[560px]:left-[60px] max-[400px]:left-[80px] z-10 transition-transform duration-500 ${getRotation(3)}`}
           alt="Rectangle"
-          src='/cat-3.png'
+          src={images[3]}
         />
       </div>
     </section>
   );
-};
+}

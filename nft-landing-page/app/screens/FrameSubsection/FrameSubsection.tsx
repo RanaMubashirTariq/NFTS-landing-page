@@ -105,23 +105,23 @@ export default function FrameSubsection  ()  {
         {nftCards.map((card, index) => (
           <Card
             key={`card-row1-${index}`}
-            className="w-[202.5px] h-[225px] bg-[#ffffff0f] rounded-[3px] shadow-[0px_7.5px_30px_#00000012] border-0"
+            className="w-[202.5px]  max-[500px]:w-[100%]  h-[225px] bg-[#ffffff0f] rounded-[3px] shadow-[0px_7.5px_30px_#00000012] border-0"
           >
             <CardContent className="relative p-0 h-full">
               <img
-                className="absolute w-[68px] h-[75px] top-0 left-[135px]"
+                className="absolute w-[68px] h-[75px] top-0 max-[500px]:w-[40%]  right-0"
                 alt="Rectangle"
                 src={card.topRightImage}
               />
 
               <img
-                className="absolute w-[68px] h-[75px] top-[82px] left-[135px] object-cover"
+                className="absolute w-[68px] h-[75px] max-[500px]:w-[40%]  top-[82px] right-0 object-cover"
                 alt="Rectangle"
                 src={card.bottomRightImage}
               />
 
               <img
-                className="absolute w-32 h-[158px] top-0 left-0 object-cover"
+                className="absolute w-32 h-[158px] max-[500px]:w-[50%]  top-0 left-0 object-cover"
                 alt="Rectangle"
                 src={card.mainImage}
               />
