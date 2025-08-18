@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #040914;
+  --foreground: #171717;
+}
+
+
+
+@font-face {
+  font-family: 'Exo2';
+  src: url('./fonts/Exo_2/Exo2-Light.ttf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo2';
+  src: url('./fonts/Exo_2/Exo2-SemiBold.ttf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo2';
+  src: url('./fonts/Exo_2/Exo2-Bold.ttf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo2';
+  src: url('./fonts/Exo_2/Exo2-ExtraBold.ttf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'saira';
+  src: url('./fonts/saira/Saira-Medium.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('./fonts/roboto/Roboto-MediumItalic.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+.bg-circle{
+  background: linear-gradient(119.99deg, #7BA49A 21.9%, #159777 125.17%);
+
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Exo2';
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
+}
