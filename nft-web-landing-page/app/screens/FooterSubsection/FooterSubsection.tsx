@@ -48,12 +48,12 @@ export default function FooterSubsection  ()  {
                   <button className="max-[530px]:mr-[30px] absolute top-[143px] max-[530px]:top-[270px] max-[530px]:right-1/2 max-[530px]:-translate-x-1/2  right-[333px] max-[1100px]:right-[50px] max-[1300px]:right-[170px] max-[1000px]:right-[25px]  max-[880px]:right-[25px] border-none outline-none bg-transparent w-[105px] h-[127.5px]  bg-white flex flex-col item-center rounded-t-[60px]  gap-[14.5px]">
                             <img src="/a-img.png" className="w-[25px h-[27px] object-contain mt-[32.25px]" alt="" />
                              <img src="remain-1.png" className="w-[63.9px] h-[9.36px] object-contain ml-5" alt="" />
-                             <span className="font-['Exo2'] text-[12px] font-extrabold leading-[11.5px]">24/5</span>
+                             <span className="font-['Exo2'] text-[12px] font-extrabold leading-[11.5px] text-black">24/5</span>
                    </button>
                                    <button className=" absolute top-[143px] max-[530px]:top-[270px] max-[530px]:right-1/4 max-[530px]:-translate-x-1/4 right-[453px] max-[1100px]:right-[50px] max-[1300px]:right-[283px] max-[1100px]:right-[200px] max-[880px]:right-[150px] max-[367px]:right-1/5 max-[367px]:-translate-x-1/5 border-none outline-none bg-transparent w-[105px] h-[127.5px]  bg-white flex flex-col item-center rounded-t-[60px]  gap-[14.5px]">
                             <img src="/playstore.png" className="w-[25px h-[27px] object-contain mt-[32.25px]" alt="" />
                              <img src="remain-1.png" className="w-[63.9px] h-[9.36px] object-contain ml-5" alt="" />
-                             <span className="font-['Exo2'] text-[12px] font-extrabold leading-[11.5px]">24/5</span>
+                             <span className="font-['Exo2'] text-[12px] font-extrabold leading-[11.5px] text-black">24/5</span>
                    </button>
                                         </div>
              

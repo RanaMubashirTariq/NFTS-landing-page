@@ -14,7 +14,7 @@ export default function OverlapGroupWrapperSubsection  () {
              <h1>Best Bid People</h1>
          </div>
           <img src="/pona-circle.png" className="absolute -right-[260px] top-[100px] w-[255px] max-[1300px]:w-[180px] max-[1300px]:-right-[180px] max-[1300px]:h-[300px] max-[1100px]:w-[100px] max-[1100px]:-right-[50px] max-[1000px]:right-0 max-[1100px]:h-[200px] max-[767px]:w-[70px] max-[767px]:right-0 max-[767px]:h-[100px] max-[767px]:top-[100px]  max-[1100px]:top-[50px]  h-[383px]" alt="" />
-      <div className="relative w-full h-full flex items-center justify-center max-[400px]:mt-[80px]">
+      <div className="relative w-full h-full flex items-center justify-center max-[400px]:mt-[50px]">
         <img
           className="absolute w-[878px] h-[331px] max-[840px]:h-[270px] max-[560px]:h-[200px] max-[400px]:h-[150px] top-[107px] max-[400px]:top-[60px] left-1/2 transform -translate-x-1/2"
           alt="Ellipse"
