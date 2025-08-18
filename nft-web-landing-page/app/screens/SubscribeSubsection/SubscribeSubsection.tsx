@@ -21,7 +21,7 @@ export default function SubscribeSubsection  () {
               <div className="relative w-full h-full rounded-[45px] ">
 
                 <Input
-                  className="absolute w-full  max-[500px]:left-1/2 max-[500px]:-translate-x-1/2  h-full top-[15px] left-[15px] bg-white opacity-20  rounded-[45px] border-none text-white placeholder:text-white [font-family:'Exo2'] font-medium text-[22.5px] tracking-[0] leading-[normal] focus-visible:ring-0 focus-visible:ring-offset-0"
+                  className="absolute w-full  max-[500px]:left-1/2 max-[500px]:-translate-x-1/2  h-full top-[15px] left-[15px] bg-white/20  rounded-[45px] border-none text-white placeholder:text-white [font-family:'Exo2'] font-medium text-[22.5px] max-[767px]:text-[18px] tracking-[0] leading-[normal] focus-visible:ring-0 focus-visible:ring-offset-0"
                   placeholder="Enter Your Mail"
                   type="email"
                 />

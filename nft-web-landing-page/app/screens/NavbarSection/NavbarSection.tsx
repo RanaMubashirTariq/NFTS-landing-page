@@ -75,17 +75,17 @@ export default function NavbarSection() {
               </Link>
             </li>
             <li>
-              <Link href="/following" onClick={() => setMenuOpen(false)}>
+              <Link href="#following" onClick={() => setMenuOpen(false)}>
                 Following
               </Link>
             </li>
             <li>
-              <Link href="/how-it-works" onClick={() => setMenuOpen(false)}>
+              <Link href="#how-it-works" onClick={() => setMenuOpen(false)}>
                 How it Works
               </Link>
             </li>
             <li>
-              <Link href="/community" onClick={() => setMenuOpen(false)}>
+              <Link href="#community" onClick={() => setMenuOpen(false)}>
                 Community
               </Link>
             </li>
