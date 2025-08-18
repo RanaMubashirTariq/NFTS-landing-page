@@ -12,7 +12,7 @@ interface CounterProps {
 const formatNumber = (num: number): string => {
   if (num >= 1_000_000_000) return (num / 1_000_000_000).toFixed(1).replace(/\.0$/, "") + "B+";
   if (num >= 1_000_000) return (num / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M+";
-  if (num >= 1_000) return (num / 1_000).toFixed(1).replace(/\.0$/, "") + "K+";
+  if (num >= 1_000) return (num / 1_000).toFixed(1).replace(/\.0$/, "") + "K";
   return num.toString() + " ";
 };
 
@@ -25,35 +25,53 @@ const CounterUp: React.FC<CounterProps> = ({
   const [started, setStarted] = useState(false);
 
   useEffect(() => {
+    const screenWidth = window.innerWidth;
+
     const startCounter = () => {
       if (started) return;
-      if (window.scrollY >= triggerAt || triggerAt === 0) {
-        setStarted(true);
 
-        let startTime: number | null = null;
+      // ✅ Case 1 & 3: Run immediately if >1100px or <767px
+      if (screenWidth > 1100 || screenWidth < 767) {
+        runCounter();
+        return;
+      }
 
-        const animate = (timestamp: number) => {
-          if (!startTime) startTime = timestamp;
-          const progress = Math.min((timestamp - startTime) / duration, 1);
-          setCount(Math.floor(progress * end));
-
-          if (progress < 1) {
-            requestAnimationFrame(animate);
-          }
-        };
-
-        requestAnimationFrame(animate);
+      // ✅ Case 2: Between 1100px & 767px → wait for scroll trigger
+      if (window.scrollY >= triggerAt) {
+        runCounter();
       }
     };
 
-    if (triggerAt === 0) startCounter();
+    const runCounter = () => {
+      setStarted(true);
+      let startTime: number | null = null;
 
+      const animate = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        setCount(Math.floor(progress * end));
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
+
+      requestAnimationFrame(animate);
+    };
+
+    // For immediate trigger
+    if (screenWidth > 1100 || screenWidth < 767 || triggerAt === 0) {
+      startCounter();
+    }
+
+    // Add scroll listener for the middle range
     window.addEventListener("scroll", startCounter);
     return () => window.removeEventListener("scroll", startCounter);
   }, [end, duration, triggerAt, started]);
 
   return <span>{formatNumber(count)}</span>;
 };
+
 // ✅ Statistics Data (numbers only, no "K+")
 const statisticsData = [
   { value: 290000, label: "Artwork" },
@@ -162,7 +180,8 @@ export default function TopHeaderSubsection() {
               {statisticsData.map((stat, index) => (
                 <div key={index} className="text-center min-w-[80px]">
                   <div className="[font-family:'Exo2'] font-bold text-white text-2xl sm:text-3xl max-[470px]:text-[22px]">
-                    <CounterUp end={stat.value} triggerAt={400} />
+                  <CounterUp end={stat.value} triggerAt={400} />+
+
                   </div>
                   <div className="[font-family:'Exo2'] font-medium text-white text-sm max-[470px]:text-[13px]">
                     {stat.label}
