@@ -4,7 +4,14 @@ import { useState } from "react";
 import Link from "next/link";   // ✅ Next.js navigation
 import { Menu, X } from "lucide-react";
 
-export default function NavbarSection({onSignInClick , onSignUpClick}) {
+type NavbarSectionProps = {
+  onSignInClick: () => void;
+  onSignUpClick: () => void;
+};
+
+
+
+export default function NavbarSection({ onSignInClick, onSignUpClick }: NavbarSectionProps ) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
 
