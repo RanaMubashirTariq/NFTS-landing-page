@@ -82,7 +82,7 @@ const statisticsData = [
 export default function TopHeaderSubsection() {
   
   return (
-    <section className="w-full h-auto relative bg-black-200 pl-[120px] pt-[176.75px] pb-[75px] max-[1370px]:pl-[80px] max-[1000px]:pt-[100px] max-[1000px]:pb-[40px] max-[1100px]:pl-[50px] max-[1000px]:pl-[25px]">
+    <section className="w-full h-auto relative bg-black-200 pl-[120px] pt-[176.75px] pb-[75px] max-[1370px]:pl-[80px] max-[1000px]:pt-[140px] max-[767px]:pt-[100px] max-[1000px]:pb-[40px] max-[1100px]:pl-[40px] max-[1000px]:pl-[25px]">
       <div className="relative w-full h-auto">
         <div className="absolute w-[278px] h-[273px] top-[80px] left-[80px] rounded-[139.16px/136.73px] rotate-[177.74deg] blur-[147.75px] bg-[linear-gradient(141deg,rgba(123,164,154,0.5)_0%,rgba(21,151,119,0.5)_100%)]" />
         
@@ -122,9 +122,9 @@ export default function TopHeaderSubsection() {
             </div>
           </div>
 
-          <div className="absolute w-[338px] top-10 left-0">
+          <div className="absolute w-[350px] top-10 left-0">
             <h1 className="[font-family:'Exo2'] font-semibold text-white text-[45px] leading-[56.2px]">
-              Create, Explore Collect Digital Art NFTs
+              Create, Explore & Collect Digital Art NFTs
             </h1>
             <p className="w-[396px] mt-6 [font-family:'Exo2'] font-light text-white text-[15px] leading-[23.2px]">
               Buy and sell NFTs from the world’s artists. More than 1000 premium
@@ -191,7 +191,7 @@ export default function TopHeaderSubsection() {
 
           {/* Heading */}
           <h1 className="[font-family:'Exo2'] font-semibold text-white text-[36px] max-[767px]:text-[28px] max-[600px]:max-w-[450px] text-center px-2">
-            Create, Explore Collect Digital Art NFTs
+            Create, Explore & Collect Digital Art NFTs
           </h1>
 
           {/* Paragraph */}

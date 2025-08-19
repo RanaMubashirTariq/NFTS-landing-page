@@ -96,7 +96,8 @@ export default function FrameSubsection  ()  {
   ];
 
   return (
-    <section className="flex flex-col gap-[23px] w-full py-[75px] pl-[120px] pb-[74.5px] max-[1370px]:pl-[80px] max[1100px]:pl-[50px] max-[1000px]:pl-[25px]">
+    <section className="relative flex flex-col gap-[23px] w-full py-[75px] pl-[120px] pb-[74.5px] max-[1370px]:pl-[80px] max[1100px]:pl-[50px] max-[1000px]:pl-[25px]">
+      <div className="absolute w-[278px] h-[273px] top-[26px] left-[165px] rounded-[139.16px/136.73px] rotate-[177.74deg] blur-[147.75px] bg-[linear-gradient(141deg,rgba(123,164,154,0.5)_0%,rgba(21,151,119,0.5)_100%)]" />
             <div className="pr-[120px] max-[1370px]:pr-[80px] max[1100px]:pr-[50px] max-[1000px]:pr-[25px] flex justify-between items-center max-[767px]:flex-col max-[767px]:gap-5">
                  <h1 className="w-[276px] font-['Exo2'] text-white text-[37.5px] font-semibold leading-[100%] max-[767px]:text-[28px] max-[767px]:text-center">Top Creator</h1>
                  <button className="rounded-[30px] cursor-pointer transform transition-transform duration-300 hover:scale-90  hover:bg-[#d3f85a]/90 w-[158.98px] h-[48.98px] bg-[#d3f85a] text-[#040914]  text-base leading-[100%] font-semibold  font-['Exo2'] ">See All</button>

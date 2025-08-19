@@ -5,8 +5,8 @@ import { Input } from "../../components/ui/input";
 
 export default function SubscribeSubsection  () {
   return (
-    <section className="w-full h-[525px] max-[1000px]:h-[900px] max-[767px]:h-[780px] max-[500px]:h-[750px] relative">
-      <div className="relative w-full h-[525px] max-[1000px]:h-[900px] max-[767px]:h-[780px]  max-[500px]:h-[750px] bg-[#ffffff0a]">
+    <section className="w-full h-[525px] max-[1000px]:h-[900px] max-[767px]:h-[780px] max-[500px]:h-[750px] relative bg-white/4 ">
+      <div className="relative w-full h-[525px] max-[1000px]:h-[900px] max-[767px]:h-[780px]  max-[500px]:h-[750px]  ">
         <div className="absolute w-full max-w-[448px] max-[1000px]:max-w-[512px] max-[400px]:max-w-[100%] h-[313px] top-[104px] left-[120px] max-[1370px]:left-[80px] max-[1100px]:left-[50px] max-[1000px]:top-[550px] max-[767px]:top-[450px] max-[1000px]:left-1/2 max-[1000px]:-translate-x-1/2 max[999px]:px-[25px]">
           <div className="absolute top-[77px] left-0 max-[1000px]:left-1/2 max-[1000px]:-translate-x-1/2 [font-family:'Exo2'] font-light text-white text-3xl max-[767px]:text-[28px] tracking-[0] leading-[normal] whitespace-nowrap">
             News letter

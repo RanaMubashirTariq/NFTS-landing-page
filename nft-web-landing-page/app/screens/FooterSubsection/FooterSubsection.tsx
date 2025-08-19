@@ -21,7 +21,7 @@ export default function FooterSubsection  ()  {
   ];
 
   return (
-    <footer className="relative w-full h-[599px] max-[700px]:h-[800px] max-[530px]:h-[1100px] bg-transparent">
+    <footer className="relative w-full h-[599px] max-[700px]:h-[800px] max-[530px]:h-[1100px] bg-[#040914]">
       <div className="relative w-full h-[599px]">
         {/* Background decorative elements */}
         <div className="absolute w-[278px] h-[273px] top-[5px] left-[1157px] rounded-[139.16px/136.73px] rotate-[177.74deg] blur-[147.75px] bg-[linear-gradient(141deg,rgba(123,164,154,0.5)_0%,rgba(21,151,119,0.5)_100%)]" />
@@ -131,15 +131,18 @@ export default function FooterSubsection  ()  {
               {index < communityLinks.length - 1 && <br />}
             </div>
           ))}
-        </nav>
+        </nav> 
 
         {/* Social media icons */}
 
-        <img
-          className="absolute w-[341px] max-[880px]:w-[280px] h-14 max-[880px]:h-10 top-[442px] max-[530px]:top-[550px]  left-[279px] max-[1300px]:left-[80px] max-[1100px]:left-[50px] max-[1000px]:left-[25px] max-[700px]:left-1/2 max-[700px]:-translate-x-1/2"
-          alt="Social media icons"
-          src='/social-icons.png'
-        />
+        <div   className="flex items-center justify-between  absolute w-[341px] max-[880px]:w-[280px] max-[500px]:w-[240px] h-14 max-[880px]:h-10 top-[442px] max-[530px]:top-[550px]  left-[279px] max-[1300px]:left-[80px] max-[1100px]:left-[50px] max-[1000px]:left-[25px] max-[700px]:left-1/2 max-[700px]:-translate-x-1/2">
+              
+              <div className="bg-[url('/icon-bg.png')] bg-center w-[56px] h-[56px] max-[880px]:w-10 max-[880px]:h-10 rounded-[15px] flex items-center justify-center cursor-pointer transform transition-transform duration-300 hover:scale-90"><img src="/google_1.png" className="w-[30px] h-[30px] max-[880px]:w-5 max-[880px]:h-5" alt="" /></div>
+              <div className="bg-[url('/icon-bg.png')] bg-center w-[56px] h-[56px] max-[880px]:w-10 max-[880px]:h-10 rounded-[15px] flex items-center justify-center cursor-pointer transform transition-transform duration-300 hover:scale-90"><img src="/twitter_1.png" className="w-[30px] h-[30px] max-[880px]:w-5 max-[880px]:h-5" alt="" /></div>
+               <div className="bg-[url('/icon-bg.png')] bg-center w-[56px] h-[56px] max-[880px]:w-10 max-[880px]:h-10 rounded-[15px] flex items-center justify-center cursor-pointer transform transition-transform duration-300 hover:scale-90"><img src="/insta-1.png" className="w-[30px] h-[30px] max-[880px]:w-5 max-[880px]:h-5" alt="" /></div>
+              <div className="bg-[url('/icon-bg.png')] bg-center w-[56px] h-[56px] max-[880px]:w-10 max-[880px]:h-10 rounded-[15px] flex items-center justify-center cursor-pointer transform transition-transform duration-300 hover:scale-90"><img src="/linked_1.png" className="w-[30px] h-[30px] max-[880px]:w-5 max-[880px]:h-5" alt="" /></div> 
+               <div className="bg-[url('/icon-bg.png')] bg-center w-[56px] h-[56px] max-[880px]:w-10 max-[880px]:h-10 rounded-[15px] flex items-center justify-center cursor-pointer transform transition-transform duration-300 hover:scale-90"><img src="/youtube_1.png"  className="w-[30px] h-[30px] max-[880px]:w-5 max-[880px]:h-5"alt="" /></div>
+        </div>
 
         {/* Copyright section */}
         <div className="absolute w-[1442px] h-[38px] bg-[#d3f85a] top-[560px] max-[530px]:top-[1040px] left-1/2 -translate-x-1/2 max-[700px]:top-[760px]">

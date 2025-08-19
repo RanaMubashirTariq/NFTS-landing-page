@@ -39,7 +39,7 @@ export default function FeatureProductSubsection() {
   };
 
   return (
-    <section className="relative w-full h-[563px] max-[500px]:h-[500px] mt-[625px] max-[1000px]:mt-[75px] max-[767px]:mt-10">
+    <section className="relative w-full h-[563px] max-[500px]:h-[500px] mt-[625px] max-[1000px]:mt-[75px] max-[767px]:mt-1">
       <div className="relative w-full h-[563px] flex justify-center">
         {/* ... background blur stays the same */}
         <div className="absolute w-[220px] h-[216px] top-[343px] right-[200px] rounded-[109.84px/107.93px] rotate-[177.74deg] blur-[147.75px] bg-[linear-gradient(141deg,rgba(123,164,154,0.5)_0%,rgba(21,151,119,0.5)_100%)]" />

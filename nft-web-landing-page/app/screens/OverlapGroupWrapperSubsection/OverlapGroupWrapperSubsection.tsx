@@ -9,7 +9,7 @@ import { Button } from "../../components/ui/button";
 
 export default function OverlapGroupWrapperSubsection  () {
   return (
-    <section className="relative w-full max-w-[917px] h-[438px] max-[400px]:h-[400px] mx-auto py-[74.5px] max-[1000px]:px-[50px] max-[767px]:px-[25px] max-[767px]:py-[40px]">
+    <section className="relative  w-full max-w-[917px] h-[438px] max-[400px]:h-[400px] mx-auto py-[74.5px] max-[1000px]:px-[50px] max-[767px]:px-[25px] max-[767px]:py-[40px]">
          <div className="font-['Exo2'] text-[37.5px] max-[767px]:text-[28px] leading-[100%] tracking-[0] font-semibold text-white w-full text-center mb-[37.5px] ">
              <h1>Best Bid People</h1>
          </div>

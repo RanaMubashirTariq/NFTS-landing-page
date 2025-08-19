@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client"
 import NavbarSection from "./screens/NavbarSection/NavbarSection";
 import TopHeaderSubsection from "./screens/TopHeaderSubsection/TopHeaderSubsection";
 import FeatureProductSubsection from "./screens/FeatureProductSubsection/FeatureProductSubsection";
@@ -9,11 +9,26 @@ import SubscribeSubsection from "./screens/SubscribeSubsection/SubscribeSubsecti
 import OverlapGroupWrapperSubsection from "./screens/OverlapGroupWrapperSubsection/OverlapGroupWrapperSubsection";
 import UserFeedbackSubsection from "./screens/UserFeedbackSubsection/UserFeedbackSubsection";
 import FooterSubsection from "./screens/FooterSubsection/FooterSubsection";
+import SignupForm from "./screens/SingUp/SignUp";
+import SignInModalDemo from "./screens/SignIn/SignIn";
+import React, { useState } from "react";
+
+
 
 export default function Home() {
+      const [openSignIn, setOpenSignIn] = useState(false);
+      const [openSignUp, setOpenSignUp] = useState(false);
+
   return (
-    <div className="overflow-hidden w-full">
-                <NavbarSection/>
+    <div className="overflow-x-hidden w-full bg-[#040914] ">
+                <NavbarSection onSignInClick={() => setOpenSignIn(true)}  onSignUpClick={() => setOpenSignUp(true)} />
+
+                  {openSignIn && <SignInModalDemo onClose={() => setOpenSignIn(false)} />}
+                    {openSignUp && <SignupForm onClose={() => setOpenSignUp(false)} />}
+                       
+                       {/* <SignInModalDemo/> */}
+
+                {/* <SignupForm/> */}
                 <TopHeaderSubsection/>
                <FeatureProductSubsection/>
                <div id="how-it-works">
@@ -24,12 +39,12 @@ export default function Home() {
                 <FrameWrapperSubsection/>
                 </div>
 
-                <FrameSubsection/>
+                
 
                 <div id="following">
                 <SubscribeSubsection/>
                 </div>
-
+                 <FrameSubsection/>
                 <OverlapGroupWrapperSubsection/>
                 <UserFeedbackSubsection/>
                 <div id="community">
