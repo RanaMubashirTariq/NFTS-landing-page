@@ -2,11 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 
 // Sign In Modal (auto open without button)
-export default function SignInModalDemo() {
-  const [open, setOpen] = useState(true);
+export default function SignInModalDemo({ open, onClose }: { open: boolean; onClose: () => void }) {
+  if (!open) return null; // Don’t render when closed
 
-  return <>{open && <SignInModal onClose={() => setOpen(false)} />}</>;
+  return <SignInModal onClose={onClose} />;
 }
+
 
 function SignInModal({ onClose }: { onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement | null>(null);

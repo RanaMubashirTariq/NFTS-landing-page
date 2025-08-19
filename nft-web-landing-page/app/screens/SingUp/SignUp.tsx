@@ -3,10 +3,11 @@ import { Eye, EyeOff } from "lucide-react";
 // Sign Up Modal (auto open without button)
 
 export default function SignUpModalDemo({ open, onClose }: { open: boolean; onClose: () => void }) {
-  if (!open) return null; // 👈 don't render if not open
+  if (!open) return null; // Don’t render when closed
 
   return <SignUpModal onClose={onClose} />;
 }
+
 function SignUpModal({ onClose }: { onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const firstNameRef = useRef<HTMLInputElement | null>(null);

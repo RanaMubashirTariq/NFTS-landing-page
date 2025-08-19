@@ -9,7 +9,7 @@ import SubscribeSubsection from "./screens/SubscribeSubsection/SubscribeSubsecti
 import OverlapGroupWrapperSubsection from "./screens/OverlapGroupWrapperSubsection/OverlapGroupWrapperSubsection";
 import UserFeedbackSubsection from "./screens/UserFeedbackSubsection/UserFeedbackSubsection";
 import FooterSubsection from "./screens/FooterSubsection/FooterSubsection";
-import SignupForm from "./screens/SingUp/SignUp";
+import SignUpModalDemo from "./screens/SingUp/SignUp"; 
 import SignInModalDemo from "./screens/SignIn/SignIn";
 import React, { useState } from "react";
 
@@ -23,9 +23,13 @@ export default function Home() {
     <div className="overflow-x-hidden w-full bg-[#040914] ">
                 <NavbarSection onSignInClick={() => setOpenSignIn(true)}  onSignUpClick={() => setOpenSignUp(true)} />
 
-                  {openSignIn && <SignInModalDemo onClose={() => setOpenSignIn(false)} />}
-                    {openSignUp && <SignupForm onClose={() => setOpenSignUp(false)} />}
-                       
+         {openSignIn && (
+  <SignInModalDemo open={openSignIn} onClose={() => setOpenSignIn(false)} />
+)}
+
+{openSignUp && (
+  <SignUpModalDemo open={openSignUp} onClose={() => setOpenSignUp(false)} />
+)}                 
                        {/* <SignInModalDemo/> */}
 
                 {/* <SignupForm/> */}
