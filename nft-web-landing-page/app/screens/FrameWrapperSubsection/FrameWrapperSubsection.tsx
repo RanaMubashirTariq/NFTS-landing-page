@@ -121,7 +121,7 @@ export default function FrameWrapperSubsection  ()  {
               <button className="rounded-[30px] cursor-pointer transform transition-transform duration-300 hover:scale-90 w-[148.98px] h-[48.98px] bg-[#d3f85a] text-[#040914]  text-base leading-[100%] font-semibold hover:bg-[#d3f85a]/90  font-['Exo2'] ">See All</button>
           </div>
 
-      <div className="grid grid-cols-4 max-[1200px]:flex max-[1200px]:flex-wrap max-[1200px]:items-center max-[1200px]:justify-center max-[1200px]:gap-10 max-[1000px]:gap-20 max-[765px]:flex-col max-[765px]:items-center gap-6 pr-[141px] max-[1370px]:pr-[50px] max-[767px]:pr-[25px]">
+      <div className="grid grid-cols-4 max-[1200px]:flex max-[1200px]:flex-wrap max-[1200px]:items-center max-[1200px]:justify-center max-[1200px]:gap-10 max-[1100px]:gap-5 max-[950px]:gap-20 max-[767px]:gap-5 max-[765px]:flex-col max-[765px]:items-center gap-6 pr-[141px] max-[1370px]:pr-[50px] max-[767px]:pr-[25px]">
         {nftCards.map((card) => (
           <div key={card.id} className="relative max-[767px]:w-full">
             <Card className=" w-[278px]  max-[765px]:w-full h-[427px] bg-[#121721cc] border-0 rounded-[9px] relative">

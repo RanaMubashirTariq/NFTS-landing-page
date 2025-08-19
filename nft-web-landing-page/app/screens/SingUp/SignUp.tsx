@@ -77,11 +77,11 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
       <div ref={dialogRef} className="absolute inset-0 grid place-items-center p-4">
-        <div className="relative w-full max-w-md rounded-2xl bg-white text-black shadow-2xl ring-1 ring-black/5 dark:bg-neutral-900 dark:text-white">
+        <div className="relative w-full max-w-md rounded-2xl  shadow-2xl ring-1 ring-black/5 bg-neutral-900 text-white">
           <button
             onClick={onClose}
             aria-label="Close"
-            className="absolute right-3 top-3 rounded-full p-2 text-sm hover:bg-black/5 dark:hover:bg-white/10"
+            className="absolute right-3 top-3 rounded-full p-2 text-sm w-[40px] h-[40px] hover:bg-white/10"
           >
             ✕
           </button>
@@ -98,7 +98,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
               {/* First Name */}
                 <div className="flex items-center justify-between gap-5 max-[500px]:flex-col max-[500px]:items-start">
                                    <div className="max-[500px]:w-full">
-                <label htmlFor="firstName" className="block text-sm font-normal mb-1 font-['Exo2] leading-[100%]">
+                <label htmlFor="firstName" className="block text-sm font-normal mb-2 font-['Exo2] leading-[100%]">
                   First Name
                 </label>
                 <input
@@ -107,7 +107,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                   type="text"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                  className="w-full rounded-xl border border-neutral-200 bg-black px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
                   placeholder="John"
                   required
                 />
@@ -116,7 +116,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
               {/* Last Name */}
               <div className="max-[500px]:w-full">
-                <label htmlFor="lastName" className="block text-sm font-normal mb-1 font-['Exo2] leading-[100%]">
+                <label htmlFor="lastName" className="block text-sm font-normal mb-2 font-['Exo2] leading-[100%]">
                   Last Name
                 </label>
                 <input
@@ -124,7 +124,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                   type="text"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                  className="w-full rounded-xl border border-neutral-200 bg-black px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
                   placeholder="Doe"
                   required
                 />
@@ -142,7 +142,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                  className="w-full rounded-xl border border-neutral-200 bg-black px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
                   placeholder="you@example.com"
                   required
                 />
@@ -164,14 +164,14 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     type={showPassword ? "text" : "password"} // 👈 toggle type
     value={password}
     onChange={(e) => setPassword(e.target.value)}
-    className="w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+    className="w-full rounded-xl border border-neutral-200 bg-black px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
     placeholder="••••••••"
     required
   />
   <button
     type="button"
     onClick={() => setShowPassword(!showPassword)}
-    className="absolute right-3 top-8 text-white hover:text-black dark:hover:text-white"
+    className="absolute right-3 top-8 text-white "
   >
     {showPassword ? <Eye size={18} /> : <EyeOff size={18} />}
   </button>
@@ -191,14 +191,14 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     type={showConfirmPassword ? "text" : "password"} // 👈 toggle type
     value={confirmPassword}
     onChange={(e) => setConfirmPassword(e.target.value)}
-    className="w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+    className="w-full rounded-xl border border-neutral-200 bg-black px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
     placeholder="••••••••"
     required
   />
   <button
     type="button"
     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-    className="absolute right-3 top-8 text-white hover:text-black dark:hover:text-white"
+    className="absolute right-3 top-8 text-white "
   >
     {showConfirmPassword ? <Eye size={18} /> : <EyeOff size={18} />}
   </button>
@@ -233,7 +233,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full rounded-xl bg-black px-4 py-2 text-sm font-semibold text-white shadow-md transition active:translate-y-[1px] disabled:opacity-60 dark:bg-[#d3f85a] hover:bg-[#d3f85a]/90 dark:text-black"
+                className="w-full rounded-xl px-4 py-2 text-sm font-semibold text-black shadow-md transition active:translate-y-[1px] disabled:opacity-60 bg-[#d3f85a] hover:bg-[#d3f85a]/90"
               >
                 {submitting ? "Signing up…" : "Sign Up"}
               </button>

@@ -8,7 +8,6 @@ export default function SignInModalDemo({ open, onClose }: { open: boolean; onCl
   return <SignInModal onClose={onClose} />;
 }
 
-
 function SignInModal({ onClose }: { onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
@@ -68,27 +67,27 @@ function SignInModal({ onClose }: { onClose: () => void }) {
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
-      <div ref={dialogRef} className="absolute inset-0 grid place-items-center p-4">
-        <div className="relative w-full max-w-md rounded-2xl bg-white text-black shadow-2xl ring-1 ring-black/5 dark:bg-neutral-900 dark:text-white">
+      <div ref={dialogRef} className="absolute inset-0 grid place-items-center p-4 ">
+        <div className="relative w-full max-w-md rounded-2xl bg-neutral-900 text-text shadow-2xl ring-1 ring-black/5 dark:bg-neutral-900 dark:text-white">
           <button
             onClick={onClose}
             aria-label="Close"
-            className="absolute right-3 top-3 rounded-full p-2 text-sm hover:bg-black/5 dark:hover:bg-white/10"
+            className="absolute right-3 top-3 rounded-full p-2 text-sm  text-white w-[40px] h-[40px] hover:bg-white/10"
           >
             ✕
           </button>
 
           <div className="px-6 pt-8 pb-6">
-            <h2 id="signin-title" className="text-2xl font-semibold tracking-tight leading-[100%] font-['Exo2']">
+            <h2 id="signin-title" className="text-2xl font-semibold text-white tracking-tight leading-[100%] font-['Exo2']">
               Sign in
             </h2>
-            <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-400 leading-[100%] font-['Exo2']">
+            <p className="mt-3 text-sm text-neutral-500  dark:text-neutral-400 leading-[100%] font-['Exo2']">
               Welcome back! Please enter your details.
             </p>
 
             <form onSubmit={onSubmit} className="mt-6 space-y-4">
               <div>
-                <label htmlFor="email" className="block text-[16px] font-normal mb-3 leading-[100%] font-['Exo2']">
+                <label htmlFor="email" className="block text-[16px] text-white font-normal mb-3 leading-[100%] font-['Exo2']">
                   Email ID
                 </label>
                 <input
@@ -97,7 +96,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                  className="w-full rounded-xl placeholder:text-white border border-neutral-200 bg-black px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
                   placeholder="you@example.com"
                   autoComplete="email"
                   required
@@ -106,7 +105,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
               </div>
 
               <div>
-                <label htmlFor="password" className="block text-[16px] font-medium mb-3 leading-[100%] font-['Exo2']">
+                <label htmlFor="password" className="block text-[16px] text-white font-medium mb-3 leading-[100%] font-['Exo2']">
                   Password
                 </label>
                 <div className="relative">
@@ -115,7 +114,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
                     type={showPwd ? "text" : "password"}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 pr-12 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                    className="w-full rounded-xl border placeholder:text-white  border-neutral-200 bg-black px-3 py-2 pr-12 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
                     placeholder="••••••••"
                     autoComplete="current-password"
                     required
@@ -123,7 +122,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
                   <button
                     type="button"
                     onClick={() => setShowPwd(!showPwd)}
-                    className="absolute right-3 top-[10px] text-white hover:text-black dark:hover:text-white"
+                    className="absolute right-3 top-[10px] text-white  "
                   >
                     {showPwd ? <Eye size={18} /> : <EyeOff size={18} />}
                   </button>
@@ -132,12 +131,12 @@ function SignInModal({ onClose }: { onClose: () => void }) {
               </div>
 
 <div className="flex items-center justify-between">
-  <label className="flex items-center gap-2 text-sm">
+  <label className="flex items-center gap-2  text-white text-sm">
     <input
       type="checkbox"
       checked={remember}
       onChange={(e) => setRemember(e.target.checked)}
-      className="size-4 rounded border-neutral-300 leading-[100%] font-['Exo2'] focus:ring-black/30 dark:border-neutral-600
+      className="size-4 rounded border-neutral-300 leading-[100%] font-['Exo2'] text-white focus:ring-black/30 dark:border-neutral-600
                  accent-[#d3f85a]" // ✅ sets background + checkmark color
       style={{
         color: "#040914", // ✅ makes the check icon (tick) this color
@@ -148,7 +147,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
 
   <a
     href="#"
-    className="text-sm underline-offset-4 hover:underline leading-[100%] font-['Exo2']"
+    className="text-sm underline-offset-4 hover:underline leading-[100%] text-white font-['Exo2']"
   >
     Forgot password?
   </a>
@@ -158,14 +157,14 @@ function SignInModal({ onClose }: { onClose: () => void }) {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full rounded-xl bg-black px-4 py-2 text-sm font-semibold text-white shadow-md transition active:translate-y-[1px] disabled:opacity-60 dark:bg-[#d3f85a] hover:bg-[#d3f85a]/90 dark:text-black "
+                className="w-full rounded-xl  px-4 py-2 text-sm font-bold text-black shadow-md transition active:translate-y-[1px]  bg-[#d3f85a] hover:bg-[#d3f85a]/90  "
               >
                 {submitting ? "Signing in…" : "Sign in"}
               </button>
 
               <div className="relative my-2">
-                <div className="absolute inset-0 top-1/2 -translate-y-1/2 border-t border-neutral-200 dark:border-neutral-700" />
-                <span className="relative mx-auto block w-max bg-white px-2 text-xs text-neutral-500 dark:bg-neutral-900 dark:text-neutral-400 leading-[100%] font-['Exo2']">
+                <div className="absolute inset-0 top-1/2 translate-y-1/2 border-t border-white dark:border-neutral-700" />
+                <span className="relative mx-auto block w-max bg-[#040914] px-2 text-xs text-white bg-neutral-900  leading-[100%] font-['Exo2']">
                   or continue with
                 </span>
               </div>
@@ -173,7 +172,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
               <button
                 type="button"
                 onClick={() => alert("Hook up Google sign-in here")}
-                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-2  mt-3 text-sm leading-[100%] font-['Exo2'] font-normal shadow-sm hover:bg-[#d3f85a] hover:text-black active:translate-y-[1px] dark:border-neutral-700 dark:bg-neutral-950"
+                className="w-full rounded-xl border border-neutral-200 text-white hover:text-black   bg-[#040914] px-4 py-2  mt-3 text-sm leading-[100%] font-['Exo2'] font-bold shadow-sm hover:bg-[#d3f85a] hover:text-black active:translate-y-[1px] dark:border-neutral-700 dark:bg-neutral-950"
               >
                 <span className="inline-flex items-center gap-2">
                   <GoogleIcon /> Sign in with Google

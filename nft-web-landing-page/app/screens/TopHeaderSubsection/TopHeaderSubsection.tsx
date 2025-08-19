@@ -137,7 +137,7 @@ export default function TopHeaderSubsection() {
                 Start Collecting
             </Button>
             <Button
-              variant="outline"
+             
               className="w-[172px] h-[52px] transform transition-transform duration-300 hover:scale-90 cursor-pointer rounded-[58.5px] border border-[#d3f85a] text-white font-['Exo2'] leading-[100%]  text-[16.5px] font-normal hover:bg-[#d3f85a]/10"
             >
               Create NFTs

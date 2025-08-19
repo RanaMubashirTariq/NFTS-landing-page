@@ -21,7 +21,7 @@ export default function FooterSubsection  ()  {
   ];
 
   return (
-    <footer className="relative w-full h-[599px] max-[700px]:h-[800px] max-[530px]:h-[1100px] bg-[#040914]">
+    <footer className="relative w-full h-[599px] max-[700px]:h-[800px] max-[530px]:h-[1080px] bg-[#040914]">
       <div className="relative w-full h-[599px]">
         {/* Background decorative elements */}
         <div className="absolute w-[278px] h-[273px] top-[5px] left-[1157px] rounded-[139.16px/136.73px] rotate-[177.74deg] blur-[147.75px] bg-[linear-gradient(141deg,rgba(123,164,154,0.5)_0%,rgba(21,151,119,0.5)_100%)]" />
