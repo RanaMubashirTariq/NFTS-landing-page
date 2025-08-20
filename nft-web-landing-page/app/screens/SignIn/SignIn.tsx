@@ -68,7 +68,8 @@ function SignInModal({ onClose }: { onClose: () => void }) {
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
       <div ref={dialogRef} className="absolute inset-0 grid place-items-center p-4 ">
-        <div className="relative w-full max-w-md rounded-2xl bg-neutral-900 text-text shadow-2xl ring-1 ring-black/5 dark:bg-neutral-900 dark:text-white">
+        <div className="relative w-full max-w-md rounded-2xl bg-[#040914] text-text shadow-2xl ring-1 ring-black/5 dark:bg-neutral-900 dark:text-white">
+        <div className="absolute w-[278px] h-[273px] top-[200px] left-[32px] rounded-[139.16px/136.73px] rotate-[177.74deg] blur-[147.75px] bg-[linear-gradient(141deg,rgba(123,164,154,0.5)_0%,rgba(21,151,119,0.5)_100%)]" />
           <button
             onClick={onClose}
             aria-label="Close"
@@ -96,7 +97,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full rounded-xl placeholder:text-white border border-neutral-200 bg-black px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                  className="w-full rounded-xl placeholder:text-white border border-neutral-200 bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
                   placeholder="you@example.com"
                   autoComplete="email"
                   required
@@ -114,7 +115,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
                     type={showPwd ? "text" : "password"}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full rounded-xl border placeholder:text-white  border-neutral-200 bg-black px-3 py-2 pr-12 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                    className="w-full rounded-xl border placeholder:text-white  border-neutral-200 bg-white/20 px-3 py-2 pr-12 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
                     placeholder="••••••••"
                     autoComplete="current-password"
                     required
@@ -136,7 +137,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
       type="checkbox"
       checked={remember}
       onChange={(e) => setRemember(e.target.checked)}
-      className="size-4 rounded border-neutral-300 leading-[100%] font-['Exo2'] text-white focus:ring-black/30 dark:border-neutral-600
+      className="size-4 rounded border-neutral-300 leading-[100%] font-['Exo2'] text-[#040914] focus:ring-black/30 dark:border-neutral-600
                  accent-[#d3f85a]" // ✅ sets background + checkmark color
       style={{
         color: "#040914", // ✅ makes the check icon (tick) this color
@@ -157,12 +158,12 @@ function SignInModal({ onClose }: { onClose: () => void }) {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full rounded-xl  px-4 py-2 text-sm font-bold text-black shadow-md transition active:translate-y-[1px]  bg-[#d3f85a] hover:bg-[#d3f85a]/90  "
+                className="relative z-11 w-full rounded-xl  px-4 py-2 text-sm font-bold text-black shadow-md transition active:translate-y-[1px]  bg-[#d3f85a] hover:bg-[#d3f85a]/90  "
               >
                 {submitting ? "Signing in…" : "Sign in"}
               </button>
 
-              <div className="relative my-2">
+              <div className="relative my-4">
                 <div className="absolute inset-0 top-1/2 translate-y-1/2 border-t border-white dark:border-neutral-700" />
                 <span className="relative mx-auto block w-max bg-[#040914] px-2 text-xs text-white bg-neutral-900  leading-[100%] font-['Exo2']">
                   or continue with
@@ -172,7 +173,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
               <button
                 type="button"
                 onClick={() => alert("Hook up Google sign-in here")}
-                className="w-full rounded-xl border border-neutral-200 text-white hover:text-black   bg-[#040914] px-4 py-2  mt-3 text-sm leading-[100%] font-['Exo2'] font-bold shadow-sm hover:bg-[#d3f85a] hover:text-black active:translate-y-[1px] dark:border-neutral-700 dark:bg-neutral-950"
+                className="z-11 w-full rounded-xl border border-neutral-200 text-white hover:text-black   bg-[#040914] px-4 py-2  mt-3 text-sm leading-[100%] font-['Exo2'] font-semibold shadow-sm hover:bg-[#d3f85a] hover:text-black active:translate-y-[1px] dark:border-neutral-700 dark:bg-neutral-950"
               >
                 <span className="inline-flex items-center gap-2">
                   <GoogleIcon /> Sign in with Google

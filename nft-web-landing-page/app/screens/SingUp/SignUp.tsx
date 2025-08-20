@@ -77,7 +77,9 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
       <div ref={dialogRef} className="absolute inset-0 grid place-items-center p-4">
-        <div className="relative w-full max-w-md rounded-2xl  shadow-2xl ring-1 ring-black/5 bg-neutral-900 text-white">
+        <div className="relative w-full max-w-md rounded-2xl  shadow-2xl ring-1 ring-black/5 bg-[#040914] text-white">
+          
+        <div className="absolute w-[278px] h-[273px] top-[200px] left-[32px] rounded-[139.16px/136.73px] rotate-[177.74deg] blur-[147.75px] bg-[linear-gradient(141deg,rgba(123,164,154,0.5)_0%,rgba(21,151,119,0.5)_100%)]" />
           <button
             onClick={onClose}
             aria-label="Close"
@@ -107,7 +109,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                   type="text"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="w-full rounded-xl border border-neutral-200 bg-black px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                  className="z-10 w-full rounded-xl border border-neutral-200 bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
                   placeholder="John"
                   required
                 />
@@ -124,7 +126,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                   type="text"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
-                  className="w-full rounded-xl border border-neutral-200 bg-black px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                  className="z-10 w-full rounded-xl border border-neutral-200 bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
                   placeholder="Doe"
                   required
                 />
@@ -133,7 +135,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                 </div>
 
               {/* Email */}
-              <div>
+              <div className="relative">
                 <label htmlFor="email" className="block text-sm font-normal mb-2 font-['Exo2] leading-[100%]">
                   Email
                 </label>
@@ -142,7 +144,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full rounded-xl border border-neutral-200 bg-black px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                  className="z-11 w-full rounded-xl border border-neutral-200 bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
                   placeholder="you@example.com"
                   required
                 />
@@ -164,7 +166,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     type={showPassword ? "text" : "password"} // 👈 toggle type
     value={password}
     onChange={(e) => setPassword(e.target.value)}
-    className="w-full rounded-xl border border-neutral-200 bg-black px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+    className="z-10 w-full rounded-xl border border-neutral-200 bg-white/20 px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
     placeholder="••••••••"
     required
   />
@@ -191,7 +193,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     type={showConfirmPassword ? "text" : "password"} // 👈 toggle type
     value={confirmPassword}
     onChange={(e) => setConfirmPassword(e.target.value)}
-    className="w-full rounded-xl border border-neutral-200 bg-black px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+    className="z-10 w-full rounded-xl border border-neutral-200 bg-white/20 px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
     placeholder="••••••••"
     required
   />
@@ -215,7 +217,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                   type="checkbox"
                   checked={acceptTerms}
                   onChange={(e) => setAcceptTerms(e.target.checked)}
-                        className="size-4 rounded border-neutral-300 leading-[100%] font-['Exo2'] focus:ring-black/30 dark:border-neutral-600
+                        className="size-4 z-10 rounded border-neutral-300 leading-[100%] font-['Exo2'] text-[#040914] focus:ring-black/30 dark:border-neutral-600
                  accent-[#d3f85a]" // ✅ sets background + checkmark color
       style={{
         color: "#040914", // ✅ makes the check icon (tick) this color
@@ -233,7 +235,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full rounded-xl px-4 py-2 text-sm font-semibold text-black shadow-md transition active:translate-y-[1px] disabled:opacity-60 bg-[#d3f85a] hover:bg-[#d3f85a]/90"
+                className="z-10 w-full rounded-xl px-4 py-2 text-sm font-semibold text-black shadow-md transition active:translate-y-[1px] disabled:opacity-60 bg-[#d3f85a] hover:bg-[#d3f85a]/90"
               >
                 {submitting ? "Signing up…" : "Sign Up"}
               </button>

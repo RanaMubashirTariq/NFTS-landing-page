@@ -43,8 +43,8 @@ export default function NavbarSection({ onSignInClick, onSignUpClick }: NavbarSe
           <input
             type="text"
             placeholder="Search..."
-            className={`-ml-[40px] max-[400px]:-ml-[30px]  rounded-[45px] transition-all duration-300 pr-3 pl-[50px] py-1 h-[41.25px]  bg-white/20 max-[400px]:bg-[#040914]  text-white text-sm placeholder:text-white 
-              ${showSearch ? "w-[180px] max-[400px]:w-[190px] opacity-100" : "w-0 opacity-0"}
+            className={`-ml-[40px] max-[400px]:-ml-[35px] border-none outline-none  rounded-[45px] transition-all duration-300 pr-3 pl-[50px] py-1 h-[41.25px]  bg-white/20 max-[400px]:bg-gray-500  text-white text-sm placeholder:text-white 
+              ${showSearch ? "w-[180px] max-[400px]:w-[195px] opacity-100" : "w-0 opacity-0"}
             `}
           />
         </div>

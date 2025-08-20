@@ -208,7 +208,6 @@ export default function TopHeaderSubsection() {
               </span>
             </Button>
             <Button
-              variant="outline"
               className="w-[140px] h-[44px] sm:w-[150px] cursor-pointer sm:h-[48px] rounded-[58.5px] border border-[#d3f85a] text-white hover:bg-[#d3f85a]/10"
             >
               Create NFTs
