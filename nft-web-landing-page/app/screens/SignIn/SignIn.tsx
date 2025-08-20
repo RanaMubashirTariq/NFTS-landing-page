@@ -132,18 +132,20 @@ function SignInModal({ onClose }: { onClose: () => void }) {
               </div>
 
 <div className="flex items-center justify-between">
-  <label className="flex items-center gap-2  text-white text-sm">
+  <label className="flex items-center gap-2   text-sm">
     <input
       type="checkbox"
       checked={remember}
       onChange={(e) => setRemember(e.target.checked)}
-      className="size-4 rounded border-neutral-300 leading-[100%] font-['Exo2'] text-[#040914] 
+      className="size-4 rounded border-neutral-300 leading-[100%] font-['Exo2']   
                  accent-[#d3f85a]" // ✅ sets background + checkmark color
       style={{
         color: "#040914", // ✅ makes the check icon (tick) this color
       }}
     />
+    <span className="text-white">
     Remember me
+    </span>
   </label>
 
   <a

@@ -223,7 +223,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
         color: "#040914", // ✅ makes the check icon (tick) this color
       }}
                 />
-                <p>
+                <p className="text-white">
                   I agree to the {" "}
                   <a href="#" className="underline underline-offset-2 hover:text-[#d3f85a]">
                     Terms and Conditions
