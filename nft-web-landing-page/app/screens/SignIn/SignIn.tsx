@@ -65,7 +65,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm max-[500px]:bg-white/10" />
 
       <div ref={dialogRef} className="absolute inset-0 grid place-items-center p-4 ">
         <div className="relative w-full max-w-md rounded-2xl bg-[#040914] text-text shadow-2xl ring-1 ring-black/5 dark:bg-neutral-900 dark:text-white">
@@ -82,7 +82,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
             <h2 id="signin-title" className="text-2xl font-semibold text-white tracking-tight leading-[100%] font-['Exo2']">
               Sign in
             </h2>
-            <p className="mt-3 text-sm text-neutral-500  dark:text-neutral-400 leading-[100%] font-['Exo2']">
+            <p className="mt-3 text-sm text-neutral-200  leading-[100%] font-['Exo2']">
               Welcome back! Please enter your details.
             </p>
 
@@ -137,7 +137,7 @@ function SignInModal({ onClose }: { onClose: () => void }) {
       type="checkbox"
       checked={remember}
       onChange={(e) => setRemember(e.target.checked)}
-      className="size-4 rounded border-neutral-300 leading-[100%] font-['Exo2'] text-[#040914] focus:ring-black/30 dark:border-neutral-600
+      className="size-4 rounded border-neutral-300 leading-[100%] font-['Exo2'] text-[#040914] 
                  accent-[#d3f85a]" // ✅ sets background + checkmark color
       style={{
         color: "#040914", // ✅ makes the check icon (tick) this color

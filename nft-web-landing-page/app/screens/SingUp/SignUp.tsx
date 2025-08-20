@@ -74,7 +74,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm max-[500px]:bg-white/10" />
 
       <div ref={dialogRef} className="absolute inset-0 grid place-items-center p-4">
         <div className="relative w-full max-w-md rounded-2xl  shadow-2xl ring-1 ring-black/5 bg-[#040914] text-white">
@@ -92,7 +92,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
             <h2 id="signup-title" className="text-2xl font-semibold tracking-tight font-['Exo2] leading-[100%]">
               Sign Up
             </h2>
-            <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
+            <p className="mt-2 text-sm text-neutral-200 ">
               Create your account by filling the information below.
             </p>
 
@@ -166,7 +166,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     type={showPassword ? "text" : "password"} // 👈 toggle type
     value={password}
     onChange={(e) => setPassword(e.target.value)}
-    className="z-10 w-full rounded-xl border border-neutral-200 bg-white/20 px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+    className="z-10 w-full rounded-xl border border-neutral-200 bg-white/20 text-[#040914] px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 "
     placeholder="••••••••"
     required
   />
