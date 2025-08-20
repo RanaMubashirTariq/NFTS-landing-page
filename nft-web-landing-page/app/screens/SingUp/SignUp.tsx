@@ -109,7 +109,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                   type="text"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="z-10 w-full rounded-xl border border-neutral-200 bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                  className="z-10 w-full rounded-xl border border-neutral-200 text-white bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 "
                   placeholder="John"
                   required
                 />
@@ -126,7 +126,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                   type="text"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
-                  className="z-10 w-full rounded-xl border border-neutral-200 bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                  className="z-10 w-full rounded-xl border text-white border-neutral-200 bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 "
                   placeholder="Doe"
                   required
                 />
@@ -144,7 +144,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="z-11 w-full rounded-xl border border-neutral-200 bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+                  className="z-11 w-full rounded-xl border text-white border-neutral-200 bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 "
                   placeholder="you@example.com"
                   required
                 />
@@ -166,7 +166,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     type={showPassword ? "text" : "password"} // 👈 toggle type
     value={password}
     onChange={(e) => setPassword(e.target.value)}
-    className="z-10 w-full rounded-xl border border-neutral-200 bg-white/20 text-[#040914] px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 "
+    className="z-10 w-full rounded-xl border text-white border-neutral-200 bg-white/20 text-[#040914] px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 "
     placeholder="••••••••"
     required
   />
@@ -193,7 +193,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     type={showConfirmPassword ? "text" : "password"} // 👈 toggle type
     value={confirmPassword}
     onChange={(e) => setConfirmPassword(e.target.value)}
-    className="z-10 w-full rounded-xl border border-neutral-200 bg-white/20 px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
+    className="z-10 w-full rounded-xl border text-white border-neutral-200 bg-white/20 px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950"
     placeholder="••••••••"
     required
   />
